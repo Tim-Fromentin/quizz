@@ -1,0 +1,77 @@
+/* ============= MAIN PAGE (WITH LOGIN) =============  */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main .container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 128px 0;
+
+}
+
+.main .container .card_quizz {
+    width: 260px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.main .container .card_quizz .quizz_image img {
+    width: 100%;
+}
+
+.main .container .card_quizz .quizz_content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 20px;
+}
+
+.main .container .card_quizz .quizz_content h2 {
+    color: #5F2FAB;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.main .container .card_quizz .quizz_content p {
+    font-weight: 500;
+    color: #7a7a7a;
+}
+
+.main .container .card_quizz .quizz_content footer {
+    width: 100%;
+    display: flex;
+    padding: 8px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .container .card_quizz .quizz_content footer button {
+    border: none;
+    outline: none;
+    background: #1B94BA;
+    color: #fff;
+    padding: 9px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.main .container .card_quizz .quizz_content footer button:hover {
+    background: #1580a1;
+}
+
+.main .container .card_quizz .quizz_content footer .review i {
+    color: gold;
+}
