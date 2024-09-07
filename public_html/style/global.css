@@ -1,0 +1,192 @@
+html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}body{margin:0;padding:0}ol,ul{list-style:none}a{text-decoration:none;color:inherit}
+
+:root {
+    /* color */
+    --color-primary: #AF3959;
+    --color-secondary: #66BF39;
+    --color-bg: #FFFFFF;
+    --color-text: #32373B;
+    --color-op-1: #C79200;
+    --color-op-2: #2968CE;
+    --color-op-3: #237E0A;
+    --color-logo: #5F2FAB;
+    /* font */
+    --font-title: ;
+    --font-text: ;
+    /* fz */
+    --fz-h1: 64px;
+    --fz-h2: 50px;
+    --fz-h3: 48px;
+    --fz-h4: 36px;
+    --fz-h5: 32px;
+    --fz-h6: 24px;
+    --fz-p: 18px;
+    /* border raduis */
+    --br-button: 15px;
+
+    --ff-roboto: "Roboto", sans-serif;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--ff-roboto);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 25px 50px;
+    font-size: 24px;
+    position: fixed;
+}
+.box_nav_links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+}
+.nav_link {
+    position: relative;
+}
+.nav_link:nth-child(2) {
+    color: #1297B9;
+}
+.nav_link:not(:nth-child(1)):not(:last-child):before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    background: var(--color-op-2);
+    transition: width .5s ease-in-out;
+}
+.nav_link:hover:not(:nth-child(1)):not(:last-child):before {
+    width: 100%;
+}
+
+.btn_hamb {
+    height: 30px;
+    width: 30px;
+    position: relative;
+}
+.btn_hamb .line {
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    border-radius: 50px;
+}
+.btn_hamb .line:nth-child(1) {
+    top: 1px;
+    transition: opacity 1.5s ease-in-out;
+}
+.btn_hamb .line:nth-child(2) {
+    top: 50%;
+    transform: translate(5px , -50%);
+}
+.btn_hamb .line:nth-child(3) {
+    bottom: 0;
+}
+.btn_hamb--active .line:nth-child(1) {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.btn_hamb--active .line:nth-child(2) {
+    animation: animBtnHambLine2 1.5s 1 ease-in-out forwards;
+}
+.btn_hamb--active .line:nth-child(3) {
+    animation: animBtnHambLine3 1.5s 1 ease-in-out forwards;
+
+}
+.btn_hamb--active-reverse .line:nth-child(2) {
+    animation: animBtnHambLine2Reverse 1.5s 1 ease-in-out forwards;
+
+}
+.btn_hamb--active-reverse .line:nth-child(3) {
+    animation: animBtnHambLine3Reverse 1.5s 1 ease-in-out forwards;
+
+}
+
+@keyframes animBtnHambLine2 {
+    0% {
+        bottom: 0;
+    }
+    50%, 51% {
+        transform: translate(0px, -50%);
+    }
+    99%, 100% {
+        transform: translate(0px, -50%) rotate(360deg);
+    }
+}
+@keyframes animBtnHambLine2Reverse {
+    0% {
+        transform: translate(0px, -50%);
+        transform: translate(0px, -50%) rotate(360deg);
+    }
+    50%, 51% {
+        transform: translate(5px, -50%);
+    }
+    99%, 100% {
+        transform: translate(5px, -50%) rotate(0deg);
+    }
+}
+@keyframes animBtnHambLine3 {
+    0% {
+        bottom: 0;
+        transform: translateY(0) rotate(0deg);
+    }
+    50%, 51% {
+        bottom: 50%;
+        transform: translateY(50%) rotate(0deg); 
+    }
+    99%, 100% {
+        bottom: 50%;
+        transform: translateY(50%) rotate(90deg); 
+    }
+}
+@keyframes animBtnHambLine3Reverse {
+    0% {
+        bottom: 50%;
+        transform: translateY(50%) rotate(90deg); 
+    }
+    50%, 51% {
+        bottom: 0;
+    }
+    99%, 100% {
+        bottom: 0;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+
+@media screen and (max-width: 628px) {
+    .box_nav_links {
+        position: absolute;
+        flex-direction: column;
+        height: calc(100vh);
+        width: 50%;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        background: hsla(207, 8%, 21%, 0.7);
+        color: var(--color-bg);
+        transition: transform 1s ease-out;
+        padding: 93.2px 50px 50px 50px;
+    }
+}
+
+.box_nav_links--active {
+    transform: translateX(0%);
+}
+
+
+.logo {
+    font-size: 36px;
+    color: var(--color-logo);
+}
