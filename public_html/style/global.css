@@ -14,13 +14,13 @@ html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}body{margin:0;p
     --font-title: ;
     --font-text: ;
     /* fz */
-    --fz-h1: 64px;
-    --fz-h2: 50px;
-    --fz-h3: 48px;
-    --fz-h4: 36px;
-    --fz-h5: 32px;
-    --fz-h6: 24px;
-    --fz-p: 18px;
+    --fz-h1: 4rem;
+    --fz-h2: 3.125rem;
+    --fz-h3: 3rem;
+    --fz-h4: 2.25rem;
+    --fz-h5: 2rem;
+    --fz-h6: 1.5rem;
+    --fz-p: 1.125rem;
     /* border raduis */
     --br-button: 15px;
 
@@ -41,6 +41,7 @@ nav {
     padding: 25px 50px;
     font-size: 24px;
     position: fixed;
+    background: var(--color-bg);
 }
 .box_nav_links {
     width: 100%;
@@ -73,6 +74,7 @@ nav {
     height: 30px;
     width: 30px;
     position: relative;
+    display: none;
 }
 .btn_hamb .line {
     width: 100%;
@@ -179,6 +181,12 @@ nav {
         transition: transform 1s ease-out;
         padding: 93.2px 50px 50px 50px;
     }
+    .btn_hamb {
+        display: block;
+    } 
+    .nav_link:hover:not(:nth-child(1)):not(:last-child):before {
+        width: 0;
+    }
 }
 
 .box_nav_links--active {
@@ -189,4 +197,52 @@ nav {
 .logo {
     font-size: 36px;
     color: var(--color-logo);
+}
+.title {
+    font-size: var(--fz-h1);
+}
+@media screen and (max-width: 425px) {
+ .title {
+    font-size: var(--fz-h3);
+ }   
+}
+.txt {
+    font-size: var(--font-text);
+}
+
+
+.link_primary {
+    background: var(--color-op-2);
+    color: var(--color-bg);
+    padding: 10px 50px;
+    font-size: 25px;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+.link_primary:hover {
+    color: var(--color-op-2);
+    background: var(--color-bg);
+    border: 1px solid var(--color-op-2);
+}
+
+@media screen and (max-width: 425px) {
+ .link_primary {
+    font-size: var(--fz-p);
+    padding: 10px 35px;
+ }   
+}
+
+
+section, header {
+    padding: 135px;
+}
+@media screen and (max-width: 768px) {
+    section, header {
+        padding: 135px 50px;
+    }
+}
+@media screen and (max-width: 360px) {
+    section, header {
+        padding: 135px 10px;
+    }
 }

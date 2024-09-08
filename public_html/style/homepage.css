@@ -1,0 +1,26 @@
+
+
+#h_homepage {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#h_homepage img {
+    width: calc(50% - 25px);
+    min-width: 250px;
+}
+#h_homepage .container {
+    width: calc(50% - 25px);
+}
+#h_homepage p {
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 425px) {
+ #h_homepage .container, #h_homepage img {
+    width: 100%;
+ }   
+}
