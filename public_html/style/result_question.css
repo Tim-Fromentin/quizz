@@ -1,0 +1,60 @@
+:root {
+    /* color */
+    --color-primary: #AF3959;
+    --color-secondary: #66BF39;
+    --color-bg: #FFFFFF;
+    --color-text: #32373B;
+    --color-op-1: #C79200;
+    --color-op-2: #2968CE;
+    --color-op-3: #237E0A;
+    --color-logo: #5F2FAB;
+    /* font */
+    --font-title: ;
+    --font-text: ;
+    /* fz */
+    --fz-h1: 64px;
+    --fz-h2: 50px;
+    --fz-h3: 48px;
+    --fz-h4: 36px;
+    --fz-h5: 32px;
+    --fz-h6: 24px;
+    --fz-p: 18px;
+    /* border raduis */
+    --br-button: 15px;
+
+    --ff-roboto: "Roboto", sans-serif;
+}
+
+
+#s_result_question {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+#s_result_question  img {
+    margin: 50px 0;
+}
+.icon_ft ion-icon {
+    font-size: 50px;
+    animation: pusleResultValueAnim 2s infinite ease-in-out;
+    border-radius: 100%;
+}
+.icon_ft .true {
+    color: var(--color-secondary);
+}
+@keyframes pusleResultValueAnim {
+    0%, 1% {
+        box-shadow: 0 0 0 0;
+    }
+    50%,51% {
+        box-shadow: 0px 0px 15px 5px var(--color-secondary);
+    }
+    99%, 100% {
+        box-shadow: 0 0 0 0;
+
+    }
+    
+}
