@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // Code pour charger le contenu du footer
   var xhrFooter = new XMLHttpRequest();
 
-  xhrFooter.open("GET", "./components/footer.html", true);
+  xhrFooter.open("GET", "../../public_html/components/footer.html", true);
   xhrFooter.onreadystatechange = function () {
     if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
       footer.innerHTML = xhrFooter.responseText;

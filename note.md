@@ -40,3 +40,7 @@
     --ff-roboto: "Roboto", sans-serif;
 }
 )
+
+<!-- TODO -->
+change la nav sur chqaue de t'es page en mettant 
+    <nav id="navbar" class="navbar" role="navigation"></nav>
