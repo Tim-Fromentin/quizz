@@ -56,7 +56,7 @@ nav {
 .nav_link:nth-child(2) {
     color: #1297B9;
 }
-.nav_link:not(:nth-child(1)):not(:last-child):before {
+.box_nav_links .nav_link:not(:last-child):before {
     content: '';
     position: absolute;
     width: 0%;
@@ -66,7 +66,7 @@ nav {
     background: var(--color-op-2);
     transition: width .5s ease-in-out;
 }
-.nav_link:hover:not(:nth-child(1)):not(:last-child):before {
+.box_nav_links .nav_link:hover:not(:last-child):before {
     width: 100%;
 }
 

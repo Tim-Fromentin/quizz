@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var xhr = new XMLHttpRequest();
 
-  xhr.open("GET", "./components/navbar.html", true);
+  xhr.open("GET", "../../public_html/components/navbar.html", true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       navbar.innerHTML = xhr.responseText;
