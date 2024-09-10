@@ -1,27 +1,4 @@
-html {
-    box-sizing: border-box
-}
-
-*,
-::after,
-::before {
-    box-sizing: inherit
-}
-
-body {
-    margin: 0;
-    padding: 0
-}
-
-ol,
-ul {
-    list-style: none
-}
-
-a {
-    text-decoration: none;
-    color: inherit
-}
+html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}body{margin:0;padding:0}ol,ul{list-style:none}a{text-decoration:none;color:inherit}
 
 :root {
     /* color */
@@ -63,11 +40,9 @@ nav {
     width: 100%;
     padding: 25px 50px;
     font-size: 24px;
-    /* FIXME: position: fixed;  */
-    /* ! fixe position fixe stp  */
+    position: fixed;
     background: var(--color-bg);
 }
-
 .box_nav_links {
     width: 100%;
     display: flex;
@@ -75,11 +50,9 @@ nav {
     align-items: center;
     padding-left: 10%;
 }
-
 .nav_link {
     position: relative;
 }
-
 .nav_link:nth-child(2) {
     color: #1297B9;
 }
@@ -103,7 +76,6 @@ nav {
     position: relative;
     display: none;
 }
-
 .btn_hamb .line {
     width: 100%;
     height: 3px;
@@ -111,40 +83,32 @@ nav {
     position: absolute;
     border-radius: 50px;
 }
-
 .btn_hamb .line:nth-child(1) {
     top: 1px;
     transition: opacity 1.5s ease-in-out;
 }
-
 .btn_hamb .line:nth-child(2) {
     top: 50%;
-    transform: translate(5px, -50%);
+    transform: translate(5px , -50%);
 }
-
 .btn_hamb .line:nth-child(3) {
     bottom: 0;
 }
-
 .btn_hamb--active .line:nth-child(1) {
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
-
 .btn_hamb--active .line:nth-child(2) {
     animation: animBtnHambLine2 1.5s 1 ease-in-out forwards;
 }
-
 .btn_hamb--active .line:nth-child(3) {
     animation: animBtnHambLine3 1.5s 1 ease-in-out forwards;
 
 }
-
 .btn_hamb--active-reverse .line:nth-child(2) {
     animation: animBtnHambLine2Reverse 1.5s 1 ease-in-out forwards;
 
 }
-
 .btn_hamb--active-reverse .line:nth-child(3) {
     animation: animBtnHambLine3Reverse 1.5s 1 ease-in-out forwards;
 
@@ -154,115 +118,53 @@ nav {
     0% {
         bottom: 0;
     }
-
-    50%,
-    51% {
+    50%, 51% {
         transform: translate(0px, -50%);
     }
-
-    99%,
-    100% {
+    99%, 100% {
         transform: translate(0px, -50%) rotate(360deg);
     }
 }
-
 @keyframes animBtnHambLine2Reverse {
     0% {
         transform: translate(0px, -50%);
         transform: translate(0px, -50%) rotate(360deg);
     }
-
-    50%,
-    51% {
+    50%, 51% {
         transform: translate(5px, -50%);
     }
-
-    99%,
-    100% {
+    99%, 100% {
         transform: translate(5px, -50%) rotate(0deg);
     }
 }
-
 @keyframes animBtnHambLine3 {
     0% {
         bottom: 0;
         transform: translateY(0) rotate(0deg);
     }
-
-    50%,
-    51% {
+    50%, 51% {
         bottom: 50%;
-        transform: translateY(50%) rotate(0deg);
+        transform: translateY(50%) rotate(0deg); 
     }
-
-    99%,
-    100% {
+    99%, 100% {
         bottom: 50%;
-        transform: translateY(50%) rotate(90deg);
+        transform: translateY(50%) rotate(90deg); 
     }
 }
-
 @keyframes animBtnHambLine3Reverse {
     0% {
         bottom: 50%;
-        transform: translateY(50%) rotate(90deg);
+        transform: translateY(50%) rotate(90deg); 
     }
-
-    50%,
-    51% {
+    50%, 51% {
         bottom: 0;
     }
-
-    99%,
-    100% {
+    99%, 100% {
         bottom: 0;
         transform: translateY(0) rotate(0deg);
     }
 }
 
-
-
-
-
-.footer {
-    width: 100%;
-    height: 70px;
-    background: #19252A;
-}
-
-.footer .container {
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-.footer .container nav {
-    padding: 0 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer .container nav a {
-    margin: 0 20px;
-    font-size: 16px;
-    color: white;
-
-}
-
-.footer .container nav button {
-    border: none;
-    outline: none;
-    padding: 9px 0;
-    background: #1B94BA;
-    color: #fff;
-}
-
-.footer .container nav .authentication_nav {
-    padding-left: 80px;
-}
 
 
 @media screen and (max-width: 628px) {
@@ -279,24 +181,11 @@ nav {
         transition: transform 1s ease-out;
         padding: 93.2px 50px 50px 50px;
     }
-
     .btn_hamb {
         display: block;
-    }
-
+    } 
     .nav_link:hover:not(:nth-child(1)):not(:last-child):before {
         width: 0;
-    }
-
-    .authentication_nav {
-        display: none;
-    }
-
-    .footer .container nav a {
-        margin: 0 18px;
-        font-size: 16px;
-        color: white;
-
     }
 }
 
@@ -309,28 +198,14 @@ nav {
     font-size: 36px;
     color: var(--color-logo);
 }
-
 .title {
     font-size: var(--fz-h1);
 }
-
 @media screen and (max-width: 425px) {
-    .title {
-        font-size: var(--fz-h3);
-    }
-
-    .authentication_nav {
-        display: none;
-    }
-
-    .footer .container nav a {
-        margin: 0 16px;
-        font-size: 16px;
-        color: white;
-
-    }
+ .title {
+    font-size: var(--fz-h3);
+ }   
 }
-
 .txt {
     font-size: var(--font-text);
 }
@@ -344,7 +219,6 @@ nav {
     border-radius: 15px;
     transition: all 0.5s ease;
 }
-
 .link_primary:hover {
     color: var(--color-op-2);
     background: var(--color-bg);
@@ -352,58 +226,23 @@ nav {
 }
 
 @media screen and (max-width: 425px) {
-    .link_primary {
-        font-size: var(--fz-p);
-        padding: 10px 35px;
-    }
-
-    .authentication_nav {
-        display: none;
-    }
-
-    .footer .container nav a {
-        margin: 0 20px;
-        font-size: 16px;
-        color: white;
-
-    }
+ .link_primary {
+    font-size: var(--fz-p);
+    padding: 10px 35px;
+ }   
 }
 
 
-section,
-header {
+section, header {
     padding: 135px;
 }
-
 @media screen and (max-width: 768px) {
-
-    section,
-    header {
+    section, header {
         padding: 135px 50px;
     }
-
-    .authentication_nav {
-        display: none;
-    }
 }
-
 @media screen and (max-width: 360px) {
-
-    section,
-    header {
+    section, header {
         padding: 135px 10px;
     }
-
-    .authentication_nav {
-        display: none;
-    }
-
-    .footer .container nav a {
-        margin: 0 16px;
-        font-size: 16px;
-        color: white;
-
-    }
-
-
 }
